@@ -38,10 +38,23 @@ bool loggedin() {
 
 // Home page
 
-bool homePage() {
-  String books, reservation;
-
-  stdout.write("Welcome to Virtual library");
+bool books() {
+  List<Map<String, String>> crimeNovels = [
+    {"Agatha Christie": "Death on the Nile"},
+    {"Agatha Christie": "The Murder of Roger Ackroyd"}
+  ];
+  List<Map<String, String>> entrepreneurship = [
+    {"Eric Ries": "The Lean Startup"},
+    {"Alexander Osterwalder": "Business Model Generation"}
+  ];
+  List<Map<String, String>> mathematics = [
+    {"Denis Guedj": "The Parrot's Theorem"},
+    {"David Berlinski": "A Tour of the Calculus"}
+  ];
+  List<Map<String, String>> englishNovel = [
+    {"Jane Austen": "Pride and Prejudice"},
+    {"J.K. Rowling": "Harry Potter and the Sorcerer’s Stone"}
+  ];
 
   return true;
 }
