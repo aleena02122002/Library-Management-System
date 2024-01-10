@@ -4,7 +4,7 @@ void main() {
   bool success = loggedin();
   if (success) {
     print("");
-    print("Welcome to the application");
+    print(books());
   } else {
     print("Try again");
   }
@@ -56,5 +56,9 @@ bool books() {
     {"J.K. Rowling": "Harry Potter and the Sorcerer’s Stone"}
   ];
 
+  String? getName = stdin.readLineSync();
+  if (getName == crimeNovels) {
+    print(crimeNovels);
+  }
   return true;
 }
