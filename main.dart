@@ -40,39 +40,37 @@ bool loggedin() {
 // Home page
 
 bool books() {
-  List<Map<String, String>> crimeNovels = [
-    {"Agatha Christie": "Death on the Nile"},
-    {"Agatha Christie": "The Murder of Roger Ackroyd"}
-  ];
-  List<Map<String, String>> entrepreneurship = [
-    {"Eric Ries": "The Lean Startup"},
-    {"Alexander Osterwalder": "Business Model Generation"}
-  ];
-  List<Map<String, String>> mathematics = [
-    {"Denis Guedj": "The Parrot's Theorem"},
-    {"David Berlinski": "A Tour of the Calculus"}
-  ];
-  List<Map<String, String>> englishNovel = [
-    {"Jane Austen": "Pride and Prejudice"},
-    {"J.K. Rowling": "Harry Potter and the Sorcerer’s Stone"}
-  ];
-  stdout.write("Enter category");
-  String? getName = stdin.readLineSync();
-  switch (getName) {
-    case 'Crime Novels':
-      print(crimeNovels);
-      break;
-    case 'Entrepreneurship':
-      print(entrepreneurship);
-      break;
-    case 'Mathematics':
-      print(mathematics);
-      break;
-    case 'English Novels':
-      print(englishNovel);
-      break;
-    default:
-      print("Category not found");
+  List<String> crimeNovels = [];
+  List<String> entrepreneurship = [];
+  List<String> mathematics = [];
+  List<String> englishNovel = [];
+
+  stdout.write("Do you want to make changes in list?");
+  String? answer = stdin.readLineSync();
+  if (answer?.toLowerCase() == "yes") {
+    stdout.write("Enter Category: ");
+    String? listName = stdin.readLineSync();
+
+    switch (listName?.toLowerCase()) {
+      case 'crime novels':
+        stdout.write("Enter book name: ");
+        String? bookName = stdin.readLineSync();
+
+        break;
+      case 'Entrepreneurship':
+        print(entrepreneurship);
+        break;
+      case 'Mathematics':
+        print(mathematics);
+        break;
+      case 'English Novels':
+        print(englishNovel);
+        break;
+      default:
+        print("Category not found");
+    }
+  } else {
+    print("Okay");
   }
   return true;
 }
