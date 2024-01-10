@@ -4,7 +4,8 @@ void main() {
   bool success = loggedin();
   if (success) {
     print("");
-    print(books());
+    print("Welcome to the application");
+    books();
   } else {
     print("Try again");
   }
@@ -55,10 +56,23 @@ bool books() {
     {"Jane Austen": "Pride and Prejudice"},
     {"J.K. Rowling": "Harry Potter and the Sorcerer’s Stone"}
   ];
-
+  stdout.write("Enter category");
   String? getName = stdin.readLineSync();
-  if (getName == crimeNovels) {
-    print(crimeNovels);
+  switch (getName) {
+    case 'Crime Novels':
+      print(crimeNovels);
+      break;
+    case 'Entrepreneurship':
+      print(entrepreneurship);
+      break;
+    case 'Mathematics':
+      print(mathematics);
+      break;
+    case 'English Novels':
+      print(englishNovel);
+      break;
+    default:
+      print("Category not found");
   }
   return true;
 }
