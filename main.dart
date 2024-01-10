@@ -54,8 +54,8 @@ bool books() {
     switch (listName?.toLowerCase()) {
       case 'crime novels':
         stdout.write("Enter book name: ");
-        String? bookName = stdin.readLineSync();
-
+        String? bookName = stdin.readLineSync()!;
+        crimeNovels.add(bookName);
         break;
       case 'Entrepreneurship':
         print(entrepreneurship);
