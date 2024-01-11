@@ -45,7 +45,7 @@ bool books() {
   List<String> mathematics = [];
   List<String> englishNovel = [];
 
-  stdout.write("Do you want to make changes in list?");
+  stdout.write("Do you want to add or remove book?");
   String? answer = stdin.readLineSync();
   if (answer?.toLowerCase() == "yes") {
     stdout.write("Enter Category: ");
@@ -59,12 +59,21 @@ bool books() {
         break;
       case 'Entrepreneurship':
         print(entrepreneurship);
+        stdout.write("Enter book name: ");
+        String? bookName = stdin.readLineSync()!;
+        entrepreneurship.add(bookName);
         break;
       case 'Mathematics':
         print(mathematics);
+        stdout.write("Enter book name: ");
+        String? bookName = stdin.readLineSync()!;
+        mathematics.add(bookName);
         break;
       case 'English Novels':
         print(englishNovel);
+        stdout.write("Enter book name: ");
+        String? bookName = stdin.readLineSync()!;
+        englishNovel.add(bookName);
         break;
       default:
         print("Category not found");
