@@ -40,14 +40,14 @@ bool loggedin() {
 // Home page
 
 bool books() {
-  List<String> crimeNovels = [];
+  List<String> crimeNovels = ["Cave and Shadows", "A Time to Kill"];
   List<String> entrepreneurship = [];
   List<String> mathematics = [];
   List<String> englishNovel = [];
 
   stdout.write("Do you want to add or remove book?");
   String? answer = stdin.readLineSync();
-  if (answer?.toLowerCase() == "yes") {
+  if (answer?.toLowerCase() == "add") {
     stdout.write("Enter Category: ");
     String? listName = stdin.readLineSync();
 
