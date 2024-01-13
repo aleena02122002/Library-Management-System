@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void main() {
+bool user() {
   while (true) {
     stdout.write("Email: ");
     String? userEmail = stdin.readLineSync();
@@ -22,4 +22,5 @@ void main() {
       tryCount++;
     }
   }
+  return true;
 }

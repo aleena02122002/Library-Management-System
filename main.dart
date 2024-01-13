@@ -1,7 +1,12 @@
 import 'dart:io';
+import 'login.dart';
 
 void main() {
-  books();
+  if (user()) {
+    books();
+  } else {
+    print("Unaccessable");
+  }
 }
 // Home page
 
@@ -11,35 +16,36 @@ bool books() {
   List<String> mathematics = [];
   List<String> englishNovel = [];
 
-  stdout.write("Do you want to add or remove book?");
+  stdout.write("Do you want to add or remove a book?");
   String? answer = stdin.readLineSync();
   if (answer?.toLowerCase() == "add") {
     stdout.write("Enter Category: ");
     String? listName = stdin.readLineSync();
 
-    switch (listName?.toLowerCase()) {
+    switch (listName?.toLowerCase().trim()) {
       case 'crime novels':
         stdout.write("Enter book name: ");
-        String? bookName = stdin.readLineSync()!;
+        String? bookName = stdin.readLineSync()!.trim();
         crimeNovels.add(bookName);
+        print(crimeNovels);
         break;
-      case 'Entrepreneurship':
-        print(entrepreneurship);
+      case 'entrepreneurship':
         stdout.write("Enter book name: ");
-        String? bookName = stdin.readLineSync()!;
+        String? bookName = stdin.readLineSync()!.trim();
         entrepreneurship.add(bookName);
+        print(entrepreneurship);
         break;
-      case 'Mathematics':
-        print(mathematics);
+      case 'mathematics':
         stdout.write("Enter book name: ");
-        String? bookName = stdin.readLineSync()!;
+        String? bookName = stdin.readLineSync()!.trim();
         mathematics.add(bookName);
+        print(mathematics);
         break;
-      case 'English Novels':
-        print(englishNovel);
+      case 'english novels':
         stdout.write("Enter book name: ");
-        String? bookName = stdin.readLineSync()!;
+        String? bookName = stdin.readLineSync()!.trim();
         englishNovel.add(bookName);
+        print(englishNovel);
         break;
       default:
         print("Category not found");
