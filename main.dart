@@ -55,3 +55,7 @@ bool books() {
   }
   return true;
 }
+
+bool remove() {
+  return true;
+}
