@@ -2,9 +2,12 @@ import 'dart:io';
 import 'login.dart';
 
 List<String> crimeNovels = ["Cave and Shadows", "A Time to Kill"];
-List<String> entrepreneurship = [];
-List<String> mathematics = [];
-List<String> englishNovel = [];
+List<String> entrepreneurship = ["Zero to One", "Business Model Generation"];
+List<String> mathematics = ["Treatise on Light", "Algebra"];
+List<String> englishNovel = [
+  "Harry Potter and the Chamber of Secrets",
+  "The Picture of Dorian Gray"
+];
 
 String? listName;
 void main() {
@@ -89,5 +92,11 @@ bool remove() {
     default:
       print("Category not found");
   }
+  return true;
+}
+
+bool addCategory() {
+  stdout.write("Enter category name: ");
+  listName = stdin.readLineSync();
   return true;
 }
