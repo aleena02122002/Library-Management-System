@@ -1,6 +1,8 @@
+import 'dart:html_common';
 import 'dart:io';
 import 'login.dart';
 
+//categories
 List<String> crimeNovels = ["Cave and Shadows", "A Time to Kill"];
 List<String> entrepreneurship = ["Zero to One", "Business Model Generation"];
 List<String> mathematics = ["Treatise on Light", "Algebra"];
@@ -89,14 +91,24 @@ bool remove() {
       englishNovel.remove(bookName);
       print(englishNovel);
       break;
+    case 'science':
+      stdout.write("Enter book name: ");
+      String? bookName = stdin.readLineSync()!.trim();
+      englishNovel.remove(bookName);
+      print("");
+      break;
     default:
       print("Category not found");
   }
   return true;
 }
 
-bool addCategory() {
-  stdout.write("Enter category name: ");
-  listName = stdin.readLineSync();
-  return true;
+List<String> addCategory() {
+  stdout.write("Enter list name: ");
+  String? listName = stdin.readLineSync()!;
+  List<String> newList = [];
+
+  newList.add(listName);
+
+  return newList;
 }
