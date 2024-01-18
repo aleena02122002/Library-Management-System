@@ -1,5 +1,9 @@
 import 'dart:io';
 
+void main() {
+  signup();
+}
+
 String? email, phone, name, password;
 bool signup() {
   stdout.write("Enter Your Full Name: ");
@@ -14,5 +18,16 @@ bool signup() {
   stdout.write("Enter Password: ");
   password = stdin.readLineSync();
 
+  String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+  if ((RegExp(emailPattern).hasMatch(email!) &&
+      name != null &&
+      phone != null &&
+      password != null)) {
+    print("");
+    print("Sign up Successfully");
+  } else {
+    print("Try again");
+  }
   return true;
 }
