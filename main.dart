@@ -20,6 +20,8 @@ void main() {
       add();
     } else if (answer?.toLowerCase() == "remove") {
       remove();
+    } else if (answer?.toLowerCase() == "borrow") {
+      borrow();
     }
   } else {
     print("Couldn't access");
