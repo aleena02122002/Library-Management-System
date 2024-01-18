@@ -1,5 +1,13 @@
-void main() {}
+import 'signup.dart';
+
+void main() {
+  userAccount();
+}
+
 bool userAccount() {
-  print("'hola");
+  print(name);
+  print(phone);
+  print(email);
+
   return true;
 }

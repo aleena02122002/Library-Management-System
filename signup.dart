@@ -1,11 +1,7 @@
-import 'dart:ffi';
 import 'dart:io';
 
-void main() {
-  signup();
-}
-
 String? email, phone, name, password;
+
 bool signup() {
   stdout.write("Enter Your Full Name: ");
   name = stdin.readLineSync();

@@ -1,10 +1,6 @@
 import 'dart:io';
 import 'signup.dart';
 
-void main() {
-  user();
-}
-
 bool user() {
   String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
   int tryCount = 0;

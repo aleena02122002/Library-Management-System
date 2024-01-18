@@ -10,7 +10,7 @@ List<String> englishNovel = [
   "The Picture of Dorian Gray"
 ];
 
-String? listName;
+String? listName, borrowBook;
 void main() {
   if (user()) {
     stdout.write("Do you want to add or remove a book?");
@@ -102,12 +102,6 @@ bool remove() {
   return true;
 }
 
-List<String> addCategory() {
-  stdout.write("Enter list name: ");
-  String? listName = stdin.readLineSync()!;
-  List<String> newList = [];
-
-  newList.add(listName);
-
-  return newList;
+bool borrow() {
+  return true;
 }
