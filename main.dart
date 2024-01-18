@@ -10,7 +10,7 @@ List<String> englishNovel = [
   "The Picture of Dorian Gray"
 ];
 
-String? listName, borrowBook;
+String? listName, borrowBook, customerName, payment, phoneNumber;
 void main() {
   if (user()) {
     stdout.write("Do you want to add or remove a book?");
@@ -104,6 +104,56 @@ bool remove() {
   return true;
 }
 
+bool borrowerDetails() {
+  stdout.write("Enter borrower Name");
+  customerName = stdin.readLineSync();
+
+  stdout.write("Enter borrower Name");
+  phoneNumber = stdin.readLineSync();
+
+  stdout.write("Enter borrower Name");
+  payment = stdin.readLineSync();
+
+  return true;
+}
+
 bool borrow() {
+  stdout.write("Enter category name: ");
+  listName = stdin.readLineSync();
+
+  switch (listName?.toLowerCase().trim()) {
+    case 'crime novels':
+      stdout.write("Enter book name: ");
+      String? bookName = stdin.readLineSync()!.trim();
+      borrowerDetails();
+      crimeNovels.remove(bookName);
+      break;
+    case 'entrepreneurship':
+      stdout.write("Enter book name: ");
+      String? bookName = stdin.readLineSync()!.trim();
+      borrowerDetails();
+      entrepreneurship.remove(bookName);
+      break;
+    case 'mathematics':
+      stdout.write("Enter book name: ");
+      String? bookName = stdin.readLineSync()!.trim();
+      borrowerDetails();
+      mathematics.remove(bookName);
+      break;
+    case 'english novels':
+      stdout.write("Enter book name: ");
+      String? bookName = stdin.readLineSync()!.trim();
+      borrowerDetails();
+      englishNovel.remove(bookName);
+      break;
+    case 'science':
+      stdout.write("Enter book name: ");
+      String? bookName = stdin.readLineSync()!.trim();
+      borrowerDetails();
+      englishNovel.remove(bookName);
+      break;
+    default:
+      print("Category not found");
+  }
   return true;
 }
