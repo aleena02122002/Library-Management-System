@@ -13,6 +13,7 @@ List<String> englishNovel = [
 String? listName, borrowBook, customerName, payment, phoneNumber;
 void main() {
   if (user()) {
+    print("");
     stdout.write("Do you want to add or remove a book?");
     String? answer = stdin.readLineSync();
 

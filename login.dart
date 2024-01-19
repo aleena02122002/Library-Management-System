@@ -6,6 +6,9 @@ bool user() {
   int tryCount = 0;
 
   if (signup()) {
+    print("");
+    print('"LOGIN ACCOUNT!"');
+    print("");
     while (true) {
       stdout.write("Email: ");
       String? userEmail = stdin.readLineSync();

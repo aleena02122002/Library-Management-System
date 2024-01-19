@@ -3,6 +3,9 @@ import 'dart:io';
 String? email, phone, name, password;
 
 bool signup() {
+  print("");
+  print('"SIGNUP DETAILS"');
+  print("");
   stdout.write("Enter Your Full Name: ");
   name = stdin.readLineSync();
 
@@ -22,7 +25,6 @@ bool signup() {
       phone != null &&
       password != null)) {
     print("");
-    print("Sign up Successfully");
   } else {
     print("Try again");
   }
