@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'login.dart';
+import 'setting.dart';
 
 //categories
 List<String> crimeNovels = ["Cave and Shadows", "A Time to Kill"];
@@ -10,26 +11,43 @@ List<String> englishNovel = [
   "The Picture of Dorian Gray"
 ];
 
-String? listName, borrowBook, customerName, payment, phoneNumber;
+String? listName, borrowBook, customerName, payment, phoneNumber, choice;
 void main() {
   if (user()) {
     print("");
-    stdout.write("Do you want to add or remove a book?");
-    String? answer = stdin.readLineSync();
+    print("Home Page     ||     Setting     ");
+    print("");
 
-    if (answer?.toLowerCase() == "add") {
-      add();
-    } else if (answer?.toLowerCase() == "remove") {
-      remove();
-    } else if (answer?.toLowerCase() == "borrow") {
-      borrow();
+    stdout.write("Please Choose One Option: ");
+    choice = stdin.readLineSync();
+
+    if (choice?.toLowerCase() == "home") {
+      homePage();
+    } else if (choice?.toLowerCase() == "setting") {
+      signOut();
+    } else {
+      print("error");
     }
   } else {
     print("Couldn't access");
   }
 }
-// Add methode
 
+bool homePage() {
+  stdout.write("Do you want to add or remove a book?");
+  String? answer = stdin.readLineSync();
+
+  if (answer?.toLowerCase() == "add") {
+    add();
+  } else if (answer?.toLowerCase() == "remove") {
+    remove();
+  } else if (answer?.toLowerCase() == "borrow") {
+    borrow();
+  }
+  return true;
+}
+
+// Add methode
 bool add() {
   stdout.write("Enter category name: ");
   listName = stdin.readLineSync();
@@ -106,13 +124,13 @@ bool remove() {
 }
 
 bool borrowerDetails() {
-  stdout.write("Enter borrower Name");
+  stdout.write("Enter borrower Name: ");
   customerName = stdin.readLineSync();
 
-  stdout.write("Enter borrower Name");
+  stdout.write("Enter borrower Contact: ");
   phoneNumber = stdin.readLineSync();
 
-  stdout.write("Enter borrower Name");
+  stdout.write("Enter Payment: ");
   payment = stdin.readLineSync();
 
   return true;
