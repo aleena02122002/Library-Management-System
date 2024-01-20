@@ -1,8 +1,8 @@
 import 'signup.dart';
 
-void main() {
-  userAccount();
-}
+// void main() {
+//   userAccount();
+// }
 
 bool userAccount() {
   print(name);

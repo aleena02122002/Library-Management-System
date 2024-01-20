@@ -24,7 +24,7 @@ void main() {
     if (choice?.toLowerCase() == "home") {
       homePage();
     } else if (choice?.toLowerCase() == "setting") {
-      setting();
+      settings();
     } else {
       print("error");
     }
