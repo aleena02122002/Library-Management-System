@@ -34,7 +34,6 @@ bool login() {
       print("");
       print("Successfully logged in");
       print("");
-      homePage();
       break;
     } else {
       print("Invalid");

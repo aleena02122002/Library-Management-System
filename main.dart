@@ -22,7 +22,7 @@ void main() {
     choice = stdin.readLineSync();
 
     if (choice?.toLowerCase() == "home") {
-      homePage();
+      features();
     } else if (choice?.toLowerCase() == "setting") {
       settings();
     } else {
@@ -34,6 +34,10 @@ void main() {
 }
 
 bool homePage() {
+  return true;
+}
+
+bool features() {
   stdout.write("Do you want to add or remove a book?");
   String? answer = stdin.readLineSync();
 
