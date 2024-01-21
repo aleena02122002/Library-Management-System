@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'main.dart';
 import 'signup.dart';
 
 bool user() {
@@ -32,6 +33,8 @@ bool login() {
         userPassword.isNotEmpty)) {
       print("");
       print("Successfully logged in");
+      print("");
+      homePage();
       break;
     } else {
       print("Invalid");
