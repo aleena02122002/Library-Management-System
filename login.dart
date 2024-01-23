@@ -6,7 +6,7 @@ bool user() {
   if (signup()) {
     login();
   } else {
-    print("You didn't recieve anything");
+    print("You didn't recieve anydata");
   }
 
   return true;
