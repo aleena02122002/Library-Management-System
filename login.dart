@@ -18,7 +18,7 @@ bool login() {
 
   print("");
   print('"LOGIN ACCOUNT!"');
-  print("");
+  print(" ");
   while (true) {
     stdout.write("Email: ");
     String? userEmail = stdin.readLineSync();
