@@ -180,3 +180,7 @@ bool borrow() {
   }
   return true;
 }
+
+bool addcategory() {
+  return true;
+}
